@@ -1,0 +1,29 @@
+.header {
+    height: 60px;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #131921;
+    top: 0;
+    z-index: 100;
+    color: white;
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+}
+
+.header__option {
+    margin-left: 20px;
+    color: white;
+}
+
+.header__title {
+    color: white;
+}
+.header__optionBasket {
+    display: flex;
+    align-items: center;
+}
