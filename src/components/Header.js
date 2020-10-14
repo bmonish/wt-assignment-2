@@ -30,7 +30,13 @@ function Header() {
             <span>{user ? "Sign Out" : " Sign In"}</span>
           </div>
         </Link>
-
+        <Link to="/orders">
+          <div className="header__option">
+            <span className="header__optionLineOne">Returns</span>
+            <br />
+            <span className="header__optionLineTwo">& Orders</span>
+          </div>
+        </Link>
         <Link to="/checkout">
           <div className="header__option">
             <div className="header__optionBasket">

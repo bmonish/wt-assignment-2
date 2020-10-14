@@ -5,8 +5,10 @@ import { useStateValue } from "../StateProvider";
 import { getBasketTotal } from "../reducer";
 import { db } from "../firebase";
 import firebase from "firebase";
+import { useHistory } from "react-router-dom";
 
 function Subtotal() {
+  const history = useHistory();
   const [{ basket, user }, dispatch] = useStateValue();
 
   const placeOrder = () => {
@@ -23,6 +25,8 @@ function Subtotal() {
         amount: getBasketTotal(basket),
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       });
+
+    history.replace("/orders");
   };
   return (
     <div className="subtotal">

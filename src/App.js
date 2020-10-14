@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import { useStateValue } from "./StateProvider";
 import Home from "./components/Home";
 import Checkout from "./components/Checkout";
+import Orders from "./components/Orders";
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -34,7 +35,10 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-
+          <Route path="/orders">
+            <Header />
+            <Orders />
+          </Route>
           <Route path="/checkout">
             <Header />
             <Checkout />
